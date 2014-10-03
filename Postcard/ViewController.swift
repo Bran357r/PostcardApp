@@ -16,6 +16,7 @@ class ViewController: UIViewController
     @IBOutlet weak var txtNameTextBox: UITextField!
     @IBOutlet weak var txtMessageTextBox: UITextField!
     
+    @IBOutlet weak var btnSendMail: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,20 @@ class ViewController: UIViewController
     
     @IBAction func btnSendMessage(sender: UIButton)
     {
+        lblNameLabel.text = txtNameTextBox.text
+        txtNameTextBox.text = ""
+        lblNameLabel.textColor = UIColor.blueColor()
+        
+        lblMessageLabel.text = txtMessageTextBox.text
+        txtMessageTextBox.text = ""
+        lblMessageLabel.textColor = UIColor.redColor()
+        
+        lblMessageLabel.hidden = false
+        lblNameLabel.hidden = false
+        
+        self.view.endEditing(true)
+        
+        btnSendMail.setTitle("Mail Sent", forState: UIControlState.Normal)
+        
     }
-
-
 }
-

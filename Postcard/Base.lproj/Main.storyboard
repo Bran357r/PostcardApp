@@ -59,12 +59,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gZe-0O-udN">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="268" y="133" width="123" height="122"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDt-vW-Gfd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,7 +66,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="285" width="368" height="30"/>
+                                    <rect key="frame" x="16" y="285" width="353" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="btnSendMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="74e-37-bZs"/>
@@ -83,7 +77,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="323" width="368" height="30"/>
+                                    <rect key="frame" x="16" y="323" width="353" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-g8-8sc">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="361" width="353" height="30"/>
                                 </variation>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5k-ne-Ylb" userLabel="lblNameLabel">
@@ -101,37 +103,35 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="133" width="244" height="122"/>
+                                    <rect key="frame" x="16" y="133" width="222" height="122"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-g8-8sc">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gZe-0O-udN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="361" width="368" height="30"/>
+                                    <rect key="frame" x="246" y="133" width="123" height="122"/>
                                 </variation>
-                            </textField>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="gZe-0O-udN"/>
                                 <exclude reference="iDt-vW-Gfd"/>
                                 <exclude reference="g2K-Jd-HIW"/>
+                                <exclude reference="sw7-g8-8sc"/>
                                 <exclude reference="V5k-ne-Ylb"/>
                                 <exclude reference="R4t-i9-pcS"/>
-                                <exclude reference="sw7-g8-8sc"/>
+                                <exclude reference="gZe-0O-udN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="gZe-0O-udN"/>
                                 <include reference="iDt-vW-Gfd"/>
                                 <include reference="g2K-Jd-HIW"/>
+                                <include reference="sw7-g8-8sc"/>
                                 <include reference="V5k-ne-Ylb"/>
                                 <include reference="R4t-i9-pcS"/>
-                                <include reference="sw7-g8-8sc"/>
+                                <include reference="gZe-0O-udN"/>
                             </mask>
                         </variation>
                     </view>
@@ -140,6 +140,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btnSendMail" destination="iDt-vW-Gfd" id="NfP-07-s11"/>
                         <outlet property="lblMessageLabel" destination="R4t-i9-pcS" id="HU2-3A-i7s"/>
                         <outlet property="lblNameLabel" destination="V5k-ne-Ylb" id="uDq-pB-FzB"/>
                         <outlet property="txtMessageTextBox" destination="sw7-g8-8sc" id="hhP-Sh-QGP"/>
